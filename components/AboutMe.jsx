@@ -1,6 +1,7 @@
 import React from "react";
 import { useTransition, useState } from "react";
 import TabButton from "./TabButton";
+import Image from "next/image";
 
 //1d     
 const TAB_DATA = [
@@ -58,15 +59,15 @@ const AboutMe = () => {
         <section className="text-white grid" id="aboutMe">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:px-32 py-16 xl-gap-16 items-center">
                 <div>
-                    <img src="/AboutMe.jpg" alt="About Me" width={450} height={450} style={{ borderRadius: "25px" }}/>
+                    <Image src="/AboutMe.jpg" alt="About Me" width={450} height={450} style={{ borderRadius: "25px" }}/>
                 </div>
                 <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
                     <h1 className="text-4xl font-bold text-white mb-4">About Me</h1>
-                    <p className="text-base text-justify lg:text-lg">"Hey there! I'm Lai Calvin, a 20-year-old Cyber Security student hailing from Kepong. Currently pursuing my degree at APU, I'm diving headfirst into the world of cybersecurity, fascinated by the ever-evolving digital landscape.
-                                                                    Beyond the digital realm, I find joy and balance in two vastly different yet equally thrilling worlds - basketball courts and virtual realms. Whether I'm on the court, shooting hoops, or immersed in the latest video game adventures, these passions fuel my downtime and keep me engaged.
-                                                                    Studying the intricacies of cybersecurity isn't just a career path; it's a passion sparked by a curiosity for safeguarding the digital world. It's about staying steps ahead in this ever-shifting technological landscape.
-                                                                    When I'm not in the midst of codes and firewalls, you'll likely find me dribbling on the basketball court or navigating through virtual quests with friends. These hobbies aren't just pastimes; they're sources of exhilaration and camaraderie.
-                                                                    Join me as I explore the intersections of cyber tech and the joy of play, aiming to make a mark in the digital world while finding balance through the joys of sports and gaming."</p>
+                    <p className="text-base text-justify lg:text-lg">&quot;Hey there! I&apos;m Lai Calvin, a 20-year-old Cyber Security student hailing from Kepong. Currently pursuing my degree at APU, I&apos;m diving headfirst into the world of cybersecurity, fascinated by the ever-evolving digital landscape.
+                                                                    Beyond the digital realm, I find joy and balance in two vastly different yet equally thrilling worlds - basketball courts and virtual realms. Whether I&apos;m on the court, shooting hoops, or immersed in the latest video game adventures, these passions fuel my downtime and keep me engaged.
+                                                                    Studying the intricacies of cybersecurity isn&apos;t just a career path; it&apos;s a passion sparked by a curiosity for safeguarding the digital world. It&apos;s about staying steps ahead in this ever-shifting technological landscape.
+                                                                    When I&apos;m not in the midst of codes and firewalls, you&apos;ll likely find me dribbling on the basketball court or navigating through virtual quests with friends. These hobbies aren&apos;t just pastimes; they&apos;re sources of exhilaration and camaraderie.
+                                                                    Join me as I explore the intersections of cyber tech and the joy of play, aiming to make a mark in the digital world while finding balance through the joys of sports and gaming.&quot;</p>
                     <div className="flex flex-row mt-8">
 {/* 1e */}
                         <TabButton 

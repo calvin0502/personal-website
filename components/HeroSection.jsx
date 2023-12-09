@@ -2,8 +2,7 @@ import React from "react";
 import TypeWritter from "typewriter-effect";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -16,35 +15,34 @@ const HeroSection = () => {
             className="col-span-1 md:col-span-8 place-self-center justify-self-start"
           >
             <h1 className="font-extrabold">
-              {/* span text seperator -- for design*/}
+              {/* span text separator -- for design*/}
               <span className="text-white text-8xl ">
-                Hello, I'm{" "} 
+                Hello, I&apos;m{" "} 
                 <span className="text-transparent bg-clip-text sm:text-8xl md:text-9xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                Calvin
+                  Calvin
                 </span>
               </span>
               <br></br>
-              <span className="text-7xl">I'm 
-              <TypeWritter
-                options={{
-                    autoStart: true,
-                    loop: true,
-                }}
-                onInit={(typewriter) => {
-                    typewriter
-                    .typeString`<span style="color:#FF77FF">Programming Developer</span>`
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString`<span style="color:#9E7BFF">CTF Player</span>`
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .typeString`<span style="color:#893BFF">Normal Person</span>`
-                    .pauseFor(1500)
-                    .deleteAll()
-                    .start();
-
-                }}
-              ></TypeWritter>
+              <span className="text-7xl">I&apos;m 
+                <TypeWritter
+                  options={{
+                      autoStart: true,
+                      loop: true,
+                  }}
+                  onInit={(typewriter) => {
+                      typewriter
+                      .typeString(`<span style="color:#FF77FF">Programming Developer</span>`)
+                      .pauseFor(1500)
+                      .deleteAll()
+                      .typeString(`<span style="color:#9E7BFF">CTF Player</span>`)
+                      .pauseFor(1500)
+                      .deleteAll()
+                      .typeString(`<span style="color:#893BFF">Normal Person</span>`)
+                      .pauseFor(1500)
+                      .deleteAll()
+                      .start();
+                  }}
+                ></TypeWritter>
               </span>
             </h1>
             <p className="text-gray-300 pt-8 text-base sm:text-lg mb-6 lg:text-xl">
@@ -68,15 +66,15 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-          <div className="w-[400px] h-[400px] relative z-0">
-            <img
-              src="/car.jpg"
-              alt="hero section"
-              className=" transform rounded-full flex relative -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={450}
-              height={450}
-            />
-          </div>
+            <div className="w-[400px] h-[400px] relative z-0">
+              <Image
+                src="/car.jpg"
+                alt="hero section"
+                className=" transform rounded-full flex relative -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                width={450}
+                height={450}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
@@ -84,4 +82,4 @@ const HeroSection = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(HeroSection), {ssr: false});
+export default HeroSection;
