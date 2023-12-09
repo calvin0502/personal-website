@@ -31,7 +31,7 @@ const EmailSection = () => {
                 </div>
             </div>
             <div className="w-[400px] h-[400px] relative z-0">
-                <img
+                <Image
                     src="/Hero-Section.png"
                     alt="hero section"
                     className="transform rounded-full flex relative -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
